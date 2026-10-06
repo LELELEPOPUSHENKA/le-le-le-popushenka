@@ -28,7 +28,10 @@ public class Vrag : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Igrok player = other.GetComponent<Igrok>();
-        player.TakeDamage(damag);
+        if (other.GetComponent<Health>() == true)
+        {
+            Health health = other.GetComponent<Health>();
+            health.TakeDamage(damag);
+        }
     }
 }
