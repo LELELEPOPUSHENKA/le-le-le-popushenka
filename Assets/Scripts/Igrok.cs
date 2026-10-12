@@ -10,6 +10,7 @@ public class Igrok : MonoBehaviour
 
     public GameObject fireballPrefab;
     public Transform attackPoint;
+    public Staff staff;
 
     public void TakeDamage(int damage)
     {
@@ -28,7 +29,7 @@ public class Igrok : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Instantiate(fireballPrefab, attackPoint.position, attackPoint.rotation);
+            staff.PlayAttack();
         }
-
     }
 }

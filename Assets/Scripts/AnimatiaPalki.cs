@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class AnimatiaPalki : MonoBehaviour
 {
     private Animator animator;
-    private string animationTrigger = "PlayAnimation";
+    private string animationTrigger = "Attack";
 
     void Start()
     {
